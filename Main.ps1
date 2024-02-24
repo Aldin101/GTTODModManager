@@ -43,6 +43,13 @@ try {
     exit
 }
 
+try {
+    $global:mods = ((Invoke-WebRequest -Uri "https://gttodmods.vegapatch.net/mods.json" -UseBasicParsing).Content | ConvertFrom-Json).mods
+} catch {
+    [System.Windows.Forms.MessageBox]::Show("An error occurred while loading the online mod list, please check your internet and try again.`n`n$_", "GTTOD Mod Manager", "OK", "Error")
+    exit
+}
+
 $tutorial = $false
 if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
     New-Item -ItemType Directory -Path "$env:appdata\GTTOD Mod Manager" | Out-Null
@@ -73,7 +80,6 @@ $menu = New-Object System.Windows.Window
 $menu.Title = "GTTOD Mod Manager"
 $menu.Width = 1280
 $menu.Height = 720
-#$menu.ResizeMode = "NoResize"
 $menu.WindowStartupLocation = "CenterScreen"
 
 $menuGrid = New-Object System.Windows.Controls.Grid

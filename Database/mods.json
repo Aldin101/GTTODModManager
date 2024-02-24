@@ -6,7 +6,7 @@
                 "Name" : "BepInEx",
                 "Description" : "The mod loader, this is needed for mods to work",
                 "Version" : "5.4.22.0",
-                "Download" : "https://aldin101.github.io/GTTODModManager/BepInEx.zip",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/BepInEx.zip",
                 "Dependencies" : [],
                 "Files" : [
                     "winhttp.dll",
@@ -18,10 +18,40 @@
                 "Name" : "K8Lib",
                 "Description" : "Library for GTTOD plugins",
                 "Version" : "1.0.0.0",
-                "Download" : "https://aldin101.github.io/GTTODModManager/K8Lib.zip",
+                "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll"
+            }
+        ],
+        [
+            "Features",
+            {
+                "Name" : "Global Chat",
+                "Description" : "Feeling nostolgic? This plugin brings back the ingame chat, just like old times!",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/GlobalChat.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll"
+            },
+            {
+                "Name" : "More Commands",
+                "Description" : "More Console Commands!",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/MoreCommands.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll"
+            },
+            {
+                "Name" : "Loop",
+                "Description" : "Lets you loop on the dev brach, this plugin will be removed when Andrew adds it back to the game.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/Loop.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\Loop.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll"
             }
         ],
         [
@@ -30,10 +60,19 @@
                 "Name" : "Dark Theme",
                 "Description" : "Dark theme for all your discord mods",
                 "Version" : "1.0.0.0",
-                "Download" : "https://aldin101.github.io/GTTODModManager/DarkTheme.zip",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/DarkTheme.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll"
+            },
+            {
+                "Name" : "Click to Crash Fix",
+                "Description" : "Fixes the bug that cases the game to hang when you click or alt+tab on the loading screen",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/Loop.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\Loop.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll"
             }
         ]
     ]

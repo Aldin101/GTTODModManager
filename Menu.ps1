@@ -127,7 +127,6 @@ function mainMenu {
     $menuLabel.Effect = $orangeGlow
     $menuGrid.Children.Add($menuLabel)
 
-    # Create a new ListBox
     $global:listBox = New-Object System.Windows.Controls.ListBox
     $listBox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Stretch
     $listBox.VerticalAlignment = [System.Windows.VerticalAlignment]::Stretch
@@ -140,7 +139,7 @@ function mainMenu {
 
     $listBox.Add_SelectionChanged({
         param($sender, $e)
-    
+
         if ($sender.SelectedIndex -eq -1) {
             return
         }
@@ -149,11 +148,9 @@ function mainMenu {
             $sender.UnselectAll()
             return
         }
-    
-        # Get the selected mod
+
         $selectedMod = $sender.Items[$sender.SelectedIndex].children[1].Content
-    
-        # Find the mod in the mods array
+
         $mod = $null
         foreach ($category in $mods) {
             foreach ($modInCategory in $category[1..$category.Length]) {
@@ -166,12 +163,9 @@ function mainMenu {
                 break
             }
         }
-    
-        # Check if the mod has any dependencies
+
         if ($mod.Dependencies) {
-            # Iterate over the dependencies
             foreach ($dependency in $mod.Dependencies) {
-                # Find the checkbox for the dependency
                 $dependencyCheckBox = $null
                 for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
                     if ($listBox.Items[$i].children[1].Content -eq $dependency) {
@@ -179,15 +173,13 @@ function mainMenu {
                         break
                     }
                 }
-    
-                # Check the checkbox for the dependency
+
                 if ($dependencyCheckBox -ne $null) {
                     $dependencyCheckBox.IsChecked = $true
                 }
             }
         }
-    
-        # If unchecking a mod, check if any other mods depend on it
+
         if ($sender.Items[$sender.SelectedIndex].children[0].IsChecked) {
             for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
                 if ($listBox.Items[$i].children[0].IsChecked) {
@@ -211,23 +203,19 @@ function mainMenu {
             }
         }
 
-        # Toggle the checkbox for the selected mod
         $sender.Items[$sender.SelectedIndex].children[0].IsChecked = !$sender.Items[$sender.SelectedIndex].children[0].IsChecked
         $sender.UnselectAll()
     })
 
-    # Create a StackPanel for the headers
     $headerPanel = New-Object System.Windows.Controls.StackPanel
     $headerPanel.Orientation = [System.Windows.Controls.Orientation]::Horizontal
 
-    # Create a Label for the Install header
     $installHeader = New-Object System.Windows.Controls.Label
     $installHeader.Content = "Install"
     $installHeader.Foreground = [System.Windows.Media.Brushes]::White
     $installHeader.Effect = $orangeGlow
     $installHeader.Margin = New-Object System.Windows.Thickness(0, 0, 0, 0)  # Adjust the right margin
 
-    # Create a Label for the Mod Name header
     $nameHeader = New-Object System.Windows.Controls.Label
     $nameHeader.Content = "Mod Name"
     $nameHeader.Foreground = [System.Windows.Media.Brushes]::White
@@ -244,29 +232,23 @@ function mainMenu {
     $latestVersionHeader.Foreground = [System.Windows.Media.Brushes]::White
     $latestVersionHeader.Effect = $orangeGlow
 
-    # Create a Label for the Mod Description header
     $descriptionHeader = New-Object System.Windows.Controls.Label
     $descriptionHeader.Content = "Mod Description"
     $descriptionHeader.Foreground = [System.Windows.Media.Brushes]::White
     $descriptionHeader.Effect = $orangeGlow
 
-    # Add the Labels to the headerPanel
     $headerPanel.Children.Add($installHeader)
     $headerPanel.Children.Add($nameHeader)
     $headerPanel.Children.Add($yourVersionHeader)
     $headerPanel.Children.Add($latestVersionHeader)
     $headerPanel.Children.Add($descriptionHeader)
 
-    # Add the headerPanel to the ListBox
     $listBox.Items.Add($headerPanel)
 
-    # Add the mods to the ListBox
     foreach ($category in $mods) {
-        # Create a StackPanel for the category
         $stackPanel = New-Object System.Windows.Controls.StackPanel
         $stackPanel.Orientation = [System.Windows.Controls.Orientation]::Horizontal
 
-        # Create a Label for the Category Name
         $cat = New-Object System.Windows.Controls.Label
         $cat.Content = $category[0]
         $cat.Foreground = [System.Windows.Media.Brushes]::White
@@ -275,33 +257,26 @@ function mainMenu {
         $cat.FontSize = 20
         $cat.FontWeight = [System.Windows.FontWeights]::Bold
 
-        # Add the Label to the StackPanel
         $stackPanel.Children.Add($cat)
 
-        # Add the StackPanel to the ListBox
         $listBox.Items.Add($stackPanel)
 
-        # Add the mods to the ListBox
         foreach ($mod in $category[1..$category.Length]) {
-            # Create a StackPanel for each mod
             $stackPanel = New-Object System.Windows.Controls.StackPanel
             $stackPanel.Orientation = [System.Windows.Controls.Orientation]::Horizontal
 
-            # Create a CheckBox for the Install option
             $checkBox = New-Object System.Windows.Controls.CheckBox
             $checkBox.Foreground = [System.Windows.Media.Brushes]::White
             $checkBox.Effect = $orangeGlow
-            $checkBox.Margin = New-Object System.Windows.Thickness(10, 5, 25, 0)  # Adjust the top and right margins
+            $checkBox.Margin = New-Object System.Windows.Thickness(10, 5, 25, 0)
             $checkBox.IsEnabled = $false
 
-            # Create a Label for the Mod Name
             $label1 = New-Object System.Windows.Controls.Label
             $label1.Content = $mod.Name
             $label1.Foreground = [System.Windows.Media.Brushes]::White
             $label1.Effect = $orangeGlow
             $label1.Width = 120
 
-            # Create a Label for the Current Version
             $label3 = New-Object System.Windows.Controls.Label
             $label3.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
             $label3.Foreground = [System.Windows.Media.Brushes]::White
@@ -322,35 +297,29 @@ function mainMenu {
             }
 
 
-            # Create a Label for the Latest Version
             $label4 = New-Object System.Windows.Controls.Label
             $label4.Content = $mod.Version
             $label4.Foreground = [System.Windows.Media.Brushes]::White
             $label4.Effect = $orangeGlow
             $label4.Width = 60
 
-            # Create a Label for the Mod Description
             $label2 = New-Object System.Windows.Controls.Label
             $label2.Content = $mod.Description
             $label2.Foreground = [System.Windows.Media.Brushes]::White
             $label2.Effect = $orangeGlow
 
-            # Add the CheckBox and Labels to the StackPanel
             $stackPanel.Children.Add($checkBox)
             $stackPanel.Children.Add($label1)
             $stackPanel.Children.Add($label3)
             $stackPanel.Children.Add($label4)
             $stackPanel.Children.Add($label2)
-    
-            # Add the StackPanel to the ListBox
+
             $listBox.Items.Add($stackPanel)
         }
     }
 
-    # Add the ListBox to the menuGrid
     $menuGrid.Children.Add($listBox)
 
-    # Create an "Install or Update" button
     $installButton = New-Object System.Windows.Controls.Button
     $installButton.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Right
     $installButton.VerticalAlignment = [System.Windows.VerticalAlignment]::Bottom
@@ -368,16 +337,13 @@ function mainMenu {
         $sender.IsEnabled = $false
         $sender.Content = "Working..."
 
-        # Iterate over the items in the ListBox
         for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
-            # Get the mod name
             if ($listBox.Items[$i].children[0].IsChecked -eq $null) {
                 continue
             }
 
             $modName = $listBox.Items[$i].children[1].Content
-    
-            # Find the mod in the mods array
+
             $mod = $null
             foreach ($category in $mods) {
                 foreach ($modInCategory in $category[1..$category.Length]) {
@@ -391,19 +357,15 @@ function mainMenu {
                 }
             }
 
-            # Check if the mod is checked
             if ($listBox.Items[$i].children[0].IsChecked) {
-                # Call install-mod
                 install-mod $mod.name $mod.Download $config.gamePath
             } else {
-                # Call uninstall-mod
                 uninstall-mod $mod.Files $config.gamePath
             }
         }
         mainMenu
     })
 
-    # Add the "Install or Update" button to the menuGrid
     $menuGrid.Children.Add($installButton)
 
     if ($tutorial) {

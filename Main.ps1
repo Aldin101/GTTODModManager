@@ -76,11 +76,18 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
 
 . .\Glow.ps1
 
+# Create a BitmapImage
+$icon = New-Object System.Windows.Media.Imaging.BitmapImage
+$icon.BeginInit()
+$icon.UriSource = New-Object System.Uri('.\Assets\icon.ico', [System.UriKind]::Relative)
+$icon.EndInit()
+
 $menu = New-Object System.Windows.Window
 $menu.Title = "GTTOD Mod Manager"
 $menu.Width = 1280
 $menu.Height = 720
 $menu.WindowStartupLocation = "CenterScreen"
+$menu.Icon = $icon
 
 $menuGrid = New-Object System.Windows.Controls.Grid
 $menuGrid.Background = [System.Windows.Media.Brushes]::Transparent

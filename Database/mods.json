@@ -58,7 +58,7 @@
             "Quality of Life",
             {
                 "Name" : "Dark Theme",
-                "Description" : "Dark theme for all your discord mods",
+                "Description" : "Dark theme for all you Discord mods",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/DarkTheme.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],

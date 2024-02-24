@@ -40,7 +40,7 @@
                 "Description" : "More Console Commands!",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/MoreCommands.zip",
-                "Dependencies" : ["BepInEx"],
+                "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll"
             },
@@ -49,7 +49,7 @@
                 "Description" : "Lets you loop on the dev brach, this plugin will be removed when Andrew adds it back to the game.",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/GTTODModManager/Loop.zip",
-                "Dependencies" : ["BepInEx"],
+                "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\Loop.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll"
             }

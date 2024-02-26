@@ -40,13 +40,13 @@
             },
             {
                 "Name" : "More Commands",
-                "Description" : "More Console Commands!",
-                "Version" : "1.0.0.0",
+                "Description" : "More Console Commands! Press the More Info button for the command list.",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/MoreCommands.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands"
             },
             {
                 "Name" : "Loop",

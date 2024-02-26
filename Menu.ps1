@@ -323,9 +323,9 @@ function mainMenu {
                 [System.Diagnostics.Process]::Start($sender.Name)
             })
 
-            # if ($mod.MoreInfoLink -eq $null) {
-            #     $moreInfoButton.Visibility = "hidden"
-            # }
+            if ($mod.MoreInfoLink -eq $null) {
+                $moreInfoButton.Visibility = "hidden"
+            }
 
             $listBox.Add_SizeChanged({
                 param($sender, $e)

@@ -317,10 +317,10 @@ function mainMenu {
             $moreInfoButton.FontSize = 12
             $moreInfoButton.Cursor = [System.Windows.Input.Cursors]::Hand
 
-            $moreInfoButton.Name = $mod.MoreInfoLink
+            $moreInfoButton.Tag = $mod.MoreInfoLink
             $moreInfoButton.Add_Click({
                 param($sender, $e)
-                [System.Diagnostics.Process]::Start($sender.Name)
+                Start-Process $sender.Tag
             })
 
             if ($mod.MoreInfoLink -eq $null) {

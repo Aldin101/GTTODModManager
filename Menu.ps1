@@ -270,6 +270,7 @@ function mainMenu {
             $checkBox.Effect = $orangeGlow
             $checkBox.Margin = New-Object System.Windows.Thickness(10, 5, 25, 0)
             $checkBox.IsEnabled = $false
+            $checkBox.IsChecked = $true
 
             $modName = New-Object System.Windows.Controls.Label
             $modName.Content = $mod.Name
@@ -282,7 +283,9 @@ function mainMenu {
             $yourVersion.Effect = $orangeGlow
             $yourVersion.Width = 87
 
+
             $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
+
             if ($yourVersion.Content -eq $mod.Version) {
                 $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
             } else {

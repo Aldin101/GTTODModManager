@@ -282,17 +282,15 @@ function mainMenu {
             $yourVersion.Effect = $orangeGlow
             $yourVersion.Width = 87
 
-            try {
-                $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
-                if ($yourVersion.Content -eq $mod.Version) {
-                    $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
-                } else {
-                    $yourVersion.Foreground = [System.Windows.Media.Brushes]::Red
-                    $yourVersion.Effect = $redGlow
-                }
-                $checkBox.IsChecked = $true
-            } catch {
-                $yourVersion.Content = ""
+            $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
+            if ($yourVersion.Content -eq $mod.Version) {
+                $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
+            } else {
+                $yourVersion.Foreground = [System.Windows.Media.Brushes]::Red
+                $yourVersion.Effect = $redGlow
+            }
+
+            if ($yourVersion.Content -eq "" -or $yourVersion.Content -eq $null) {
                 $checkBox.IsChecked = $false
             }
 

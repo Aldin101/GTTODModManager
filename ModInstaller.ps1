@@ -9,14 +9,19 @@ function Install-Mod {
         [string] $gameFolder
     )
 
-    # Download the zip file
-    $zipFile = Join-Path $env:TEMP "$modName.zip"
-    Invoke-WebRequest -Uri $downloadUrl -OutFile $zipFile
+    if (!(Test-Path $gameFolder)) {
+        return
+    }
 
-    # Extract the zip file to the game folder
+    $zipFile = Join-Path $env:TEMP "$modName.zip"
+    try {
+        Invoke-WebRequest -Uri $downloadUrl -OutFile $zipFile
+    } catch {
+        [System.Windows.Forms.MessageBox]::Show("Failed to download mod $modName.`n`n$_", "GTTOD Mod Manager", "OK", "Error")
+    }
+
     Expand-Archive -Path $zipFile -DestinationPath $gameFolder -Force
 
-    # Delete the zip file
     Remove-Item $zipFile
 }
 
@@ -28,7 +33,14 @@ function Uninstall-Mod {
         [string] $gameFolder
     )
 
-    # Delete the files and directories
+    if (!(Test-Path $files[0])) {
+        return
+    }
+
+    if (!(Test-Path $gameFolder)) {
+        return
+    }
+
     foreach ($file in $files) {
         $path = Join-Path $gameFolder $file
         if (Test-Path $path) {

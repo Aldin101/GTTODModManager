@@ -11,7 +11,6 @@ function settings {
     $backButton.Visibility = "Visible"
 
     $global:settingsLabel = New-Object System.Windows.Controls.Label
-    $settingsLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Middle
     $settingsLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
     $settingsLabel.Content = "Settings"
     $settingsLabel.Foreground = [System.Windows.Media.Brushes]::White

@@ -12,7 +12,8 @@
                     "winhttp.dll",
                     "BepInEx\\"
                 ],
-                "VersionInfoFile" : "BepInEx\\core\\BepInEx.dll"
+                "VersionInfoFile" : "BepInEx\\core\\BepInEx.dll",
+                "MoreInfoLink" : "https://github.com/BepInEx/BepInEx"
             },
             {
                 "Name" : "K8Lib",
@@ -21,7 +22,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll",
+                "MoreInfoLink" : "https://github.com/ALdin101/K8Lib"
             }
         ],
         [
@@ -33,7 +35,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/GlobalChat.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
+                "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat"
             },
             {
                 "Name" : "More Commands",
@@ -42,7 +45,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/MoreCommands.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll",
+                "MoreInfoLink" : null
             },
             {
                 "Name" : "Loop",
@@ -51,7 +55,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\Loop.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll",
+                "MoreInfoLink" : null
             }
         ],
         [
@@ -63,7 +68,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/DarkTheme.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll",
+                "MoreInfoLink" : null
             },
             {
                 "Name" : "Click to Crash Fix",
@@ -72,7 +78,8 @@
                 "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\Loop.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll"
+                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll",
+                "MoreInfoLink" : null
             }
         ]
     ]

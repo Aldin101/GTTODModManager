@@ -271,48 +271,83 @@ function mainMenu {
             $checkBox.Margin = New-Object System.Windows.Thickness(10, 5, 25, 0)
             $checkBox.IsEnabled = $false
 
-            $label1 = New-Object System.Windows.Controls.Label
-            $label1.Content = $mod.Name
-            $label1.Foreground = [System.Windows.Media.Brushes]::White
-            $label1.Effect = $orangeGlow
-            $label1.Width = 120
+            $modName = New-Object System.Windows.Controls.Label
+            $modName.Content = $mod.Name
+            $modName.Foreground = [System.Windows.Media.Brushes]::White
+            $modName.Effect = $orangeGlow
+            $modName.Width = 120
 
-            $label3 = New-Object System.Windows.Controls.Label
-            $label3.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
-            $label3.Foreground = [System.Windows.Media.Brushes]::White
-            $label3.Effect = $orangeGlow
-            $label3.Width = 87
+            $yourVersion = New-Object System.Windows.Controls.Label
+            $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
+            $yourVersion.Foreground = [System.Windows.Media.Brushes]::White
+            $yourVersion.Effect = $orangeGlow
+            $yourVersion.Width = 87
 
             if (Test-Path ($config.gamePath + $mod.VersionInfoFile)) {
-                if ($label3.Content -eq $mod.Version) {
-                    $label3.Foreground = [System.Windows.Media.Brushes]::LightGreen
+                if ($yourVersion.Content -eq $mod.Version) {
+                    $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
                 } else {
-                    $label3.Foreground = [System.Windows.Media.Brushes]::Red
-                    $label3.Effect = $redGlow
+                    $yourVersion.Foreground = [System.Windows.Media.Brushes]::Red
+                    $yourVersion.Effect = $redGlow
                 }
                 $checkBox.IsChecked = $true
             } else {
-                $label3.Content = ""
+                $yourVersion.Content = ""
                 $checkBox.IsChecked = $false
             }
 
 
-            $label4 = New-Object System.Windows.Controls.Label
-            $label4.Content = $mod.Version
-            $label4.Foreground = [System.Windows.Media.Brushes]::White
-            $label4.Effect = $orangeGlow
-            $label4.Width = 60
+            $latestVersion = New-Object System.Windows.Controls.Label
+            $latestVersion.Content = $mod.Version
+            $latestVersion.Foreground = [System.Windows.Media.Brushes]::White
+            $latestVersion.Effect = $orangeGlow
+            $latestVersion.Width = 60
 
-            $label2 = New-Object System.Windows.Controls.Label
-            $label2.Content = $mod.Description
-            $label2.Foreground = [System.Windows.Media.Brushes]::White
-            $label2.Effect = $orangeGlow
+            $modDescription = New-Object System.Windows.Controls.Label
+            $modDescription.Content = $mod.Description
+            $modDescription.Foreground = [System.Windows.Media.Brushes]::White
+            $modDescription.Effect = $orangeGlow
+            $modDescription.Width = $menu.Width - 410
+
+            $moreInfoButton = New-Object System.Windows.Controls.Button
+            $moreInfoButton.Content = "More Info"
+            $moreInfoButton.Foreground = [System.Windows.Media.Brushes]::White
+            $moreInfoButton.Background = [System.Windows.Media.Brushes]::Black
+            $moreInfoButton.FontFamily = $chakraPetch
+            $moreInfoButton.FontSize = 12
+            $moreInfoButton.Cursor = [System.Windows.Input.Cursors]::Hand
+
+            $moreInfoButton.Name = $mod.MoreInfoLink
+            $moreInfoButton.Add_Click({
+                param($sender, $e)
+                [System.Diagnostics.Process]::Start($sender.Name)
+            })
+
+            # if ($mod.MoreInfoLink -eq $null) {
+            #     $moreInfoButton.Visibility = "hidden"
+            # }
+
+            $listBox.Add_SizeChanged({
+                param($sender, $e)
+
+                foreach ($stackPanel in $sender.Items) {
+                    if ($stackPanel.children[5].Width -eq $null) {
+                        continue
+                    }
+                    try {
+                        $stackPanel.children[4].Width = $menu.Width - 420
+                    } catch {
+                        return
+                    }
+                }
+            })
 
             $stackPanel.Children.Add($checkBox)
-            $stackPanel.Children.Add($label1)
-            $stackPanel.Children.Add($label3)
-            $stackPanel.Children.Add($label4)
-            $stackPanel.Children.Add($label2)
+            $stackPanel.Children.Add($modName)
+            $stackPanel.Children.Add($yourVersion)
+            $stackPanel.Children.Add($latestVersion)
+            $stackPanel.Children.Add($modDescription)
+            $stackPanel.Children.Add($moreInfoButton)
 
             $listBox.Items.Add($stackPanel)
         }
@@ -334,8 +369,10 @@ function mainMenu {
     $installButton.Cursor = [System.Windows.Input.Cursors]::Hand
     $installButton.Add_Click({
         param($sender, $e)
-        $sender.IsEnabled = $false
-        $sender.Content = "Working..."
+        if (!(Test-Path "$($config.gamePath)Get To The Orange Door.exe")) {
+            [System.Windows.Forms.MessageBox]::Show("Game folder not found. Please set the game folder in the settings.", "GTTOD Mod Manager", "OK", "Error")
+            return
+        }
 
         for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
             if ($listBox.Items[$i].children[0].IsChecked -eq $null) {
@@ -378,5 +415,6 @@ function mainMenu {
         )
 
         tutorial $tutorialMessages $orangeGlow
+        $global:tutorial = $false
     }
 }

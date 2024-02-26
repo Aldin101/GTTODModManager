@@ -90,7 +90,7 @@ function setMenuImageMp4 {
 
     $grid = New-Object System.Windows.Controls.Grid
     $grid.Children.Add($background)
-    $grid.Opacity = 0.5
+    $grid.Opacity = 0.25
 
     $global:backgroundVisualBrush = New-Object System.Windows.Media.VisualBrush $grid
 

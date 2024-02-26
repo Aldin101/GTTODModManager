@@ -50,7 +50,7 @@ try {
     exit
 }
 
-$tutorial = $false
+$global:tutorial = $false
 if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
     New-Item -ItemType Directory -Path "$env:appdata\GTTOD Mod Manager" | Out-Null
     $global:config = @{
@@ -59,7 +59,7 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
         "gamePath" = findGamePath
     }
     $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
-    $tutorial = $true
+    $global:tutorial = $true
 } else {
     try {
         $global:config = Get-Content "$env:appdata\GTTOD Mod Manager\config.json" | ConvertFrom-Json
@@ -70,7 +70,7 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
             "gamePath" = findGamePath
         }
         $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
-        $tutorial = $true
+        $global:tutorial = $true
     }
 }
 
@@ -86,6 +86,8 @@ $menu = New-Object System.Windows.Window
 $menu.Title = "GTTOD Mod Manager"
 $menu.Width = 1280
 $menu.Height = 720
+$menu.MinWidth = 645
+$menu.MinHeight = 250
 $menu.WindowStartupLocation = "CenterScreen"
 $menu.Icon = $icon
 

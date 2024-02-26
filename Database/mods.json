@@ -60,6 +60,19 @@
             }
         ],
         [
+            "Gameplay",
+            {
+                "Name" : "The Floor is Lava",
+                "Description" : "Stay off the floor! (This plugin can be disabled in game)",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/FloorIsLava.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\FloorIsLava.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\FloorIsLava.dll",
+                "MoreInfoLink" : null
+            }
+        ],
+        [
             "Quality of Life",
             {
                 "Name" : "Dark Theme",

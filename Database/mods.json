@@ -74,7 +74,7 @@
             {
                 "Name" : "Click to Crash Fix",
                 "Description" : "Fixes the bug that cases the game to hang when you click or alt+tab on the loading screen",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],

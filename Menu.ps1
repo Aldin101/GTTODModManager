@@ -214,13 +214,13 @@ function mainMenu {
     $installHeader.Content = "Install"
     $installHeader.Foreground = [System.Windows.Media.Brushes]::White
     $installHeader.Effect = $orangeGlow
-    $installHeader.Margin = New-Object System.Windows.Thickness(0, 0, 0, 0)  # Adjust the right margin
+    $installHeader.Margin = New-Object System.Windows.Thickness(0, 0, 0, 0)
 
     $nameHeader = New-Object System.Windows.Controls.Label
     $nameHeader.Content = "Mod Name"
     $nameHeader.Foreground = [System.Windows.Media.Brushes]::White
     $nameHeader.Effect = $orangeGlow
-    $nameHeader.Margin = New-Object System.Windows.Thickness(0, 0, 40, 0)  # Adjust the right margin
+    $nameHeader.Margin = New-Object System.Windows.Thickness(0, 0, 40, 0)
 
     $yourVersionHeader = New-Object System.Windows.Controls.Label
     $yourVersionHeader.Content = "Your Version"
@@ -278,12 +278,12 @@ function mainMenu {
             $modName.Width = 120
 
             $yourVersion = New-Object System.Windows.Controls.Label
-            $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
             $yourVersion.Foreground = [System.Windows.Media.Brushes]::White
             $yourVersion.Effect = $orangeGlow
             $yourVersion.Width = 87
 
-            if (Test-Path ($config.gamePath + $mod.VersionInfoFile)) {
+            try {
+                $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
                 if ($yourVersion.Content -eq $mod.Version) {
                     $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
                 } else {
@@ -291,11 +291,10 @@ function mainMenu {
                     $yourVersion.Effect = $redGlow
                 }
                 $checkBox.IsChecked = $true
-            } else {
+            } catch {
                 $yourVersion.Content = ""
                 $checkBox.IsChecked = $false
             }
-
 
             $latestVersion = New-Object System.Windows.Controls.Label
             $latestVersion.Content = $mod.Version

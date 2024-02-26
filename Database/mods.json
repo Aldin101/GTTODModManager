@@ -54,8 +54,8 @@
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
-                "Files" : ["BepInEx\\plugins\\Loop.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll",
+                "Files" : ["BepInEx\\plugins\\loop.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\loop.dll",
                 "MoreInfoLink" : null
             }
         ],
@@ -75,10 +75,10 @@
                 "Name" : "Click to Crash Fix",
                 "Description" : "Fixes the bug that cases the game to hang when you click or alt+tab on the loading screen",
                 "Version" : "1.0.0.0",
-                "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
+                "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
                 "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\Loop.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\Loop.dll",
+                "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
                 "MoreInfoLink" : null
             }
         ]

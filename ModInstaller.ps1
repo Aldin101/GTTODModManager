@@ -33,7 +33,7 @@ function Uninstall-Mod {
         [string] $gameFolder
     )
 
-    if (!(Test-Path $files[0])) {
+    if (!(Test-Path "$gameFolder$($files[0])")) {
         return
     }
 

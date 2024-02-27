@@ -30,7 +30,7 @@
             "Features",
             {
                 "Name" : "Global Chat",
-                "Description" : "Feeling nostolgic? This plugin brings back the ingame chat, just like old times!",
+                "Description" : "Feeling nostalgic? This plugin brings back the in-game chat, just like old times!",
                 "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/GlobalChat.zip",
                 "Dependencies" : ["BepInEx"],

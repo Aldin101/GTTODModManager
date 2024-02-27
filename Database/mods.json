@@ -49,6 +49,16 @@
                 "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands"
             },
             {
+                "Name" : "No Hands",
+                "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\NoHands.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
+                "MoreInfoLink" : null
+            },
+            {
                 "Name" : "Loop",
                 "Description" : "Lets you loop on the dev brach, this plugin will be removed when Andrew adds it back to the game.",
                 "Version" : "1.0.0.0",

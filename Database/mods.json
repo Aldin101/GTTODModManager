@@ -53,7 +53,7 @@
                 "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
-                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\NoHands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
                 "MoreInfoLink" : null
@@ -109,7 +109,7 @@
                 "Description" : "New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/maxout.zip",
-                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
                 "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout"

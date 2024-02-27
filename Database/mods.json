@@ -106,7 +106,7 @@
             },
             {
                 "Name" : "maxout",
-                "Description" : "New from New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
+                "Description" : "New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/maxout.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],

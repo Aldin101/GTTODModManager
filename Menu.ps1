@@ -111,6 +111,9 @@ function Format-Json([Parameter(Mandatory, ValueFromPipeline)][String] $json) {
     }) -Join "`n"
 }
 function mainMenu {
+    param(
+        [bool]$loadSettings = $false
+    )
     clearMenuObjects
 
     $backButton.Visibility = "Hidden"
@@ -416,5 +419,9 @@ function mainMenu {
 
         tutorial $tutorialMessages $orangeGlow
         $global:tutorial = $false
+    }
+
+    if ($loadSettings) {
+        settings
     }
 }

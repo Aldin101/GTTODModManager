@@ -54,6 +54,8 @@ function settings {
         $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
 
         . .\Glow.ps1
+
+        mainMenu $true
     })
 
     $glowCheckbox.Add_Unchecked({
@@ -62,6 +64,9 @@ function settings {
 
         foreach ($control in $menuGrid.Children) {
             $control.Effect = $null
+            foreach ($child in $control.Items.Children) {
+                $child.Effect = $null
+            }
         }
 
         . .\Glow.ps1
@@ -85,7 +90,8 @@ function settings {
     $backgroundsCheckbox.Add_Checked({
         $global:config.backgrounds = $true
         $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
-
+    
+        setMenuImageMp4 ".\Assets\Backgrounds\MainMenu.mp4"
         $background.Play()
         $menu.Background = $backgroundVisualBrush
     })

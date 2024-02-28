@@ -95,8 +95,6 @@ $menuGrid = New-Object System.Windows.Controls.Grid
 $menuGrid.Background = [System.Windows.Media.Brushes]::Transparent
 $menu.Content = $menuGrid
 
-setMenuImageMp4 ".\Assets\placeholder.mp4"
-
 if (Test-Path "$env:appdata\Steam Cloudify for Get To The Orange Door\") {
     taskkill /f /im "Get To The Orange Door Game.exe" 2>$null | out-null
 } else {

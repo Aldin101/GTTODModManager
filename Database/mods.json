@@ -125,13 +125,13 @@
                 "MoreInfoLink" : null
             },
             {
-                "Name" : "No Cavity Lines",
+                "Name" : "Remove Cavity Lines",
                 "Description" : "Removed the cavity lines that a lot of people don't like",
                 "Version" : "1.0.0.0",
-                "Download" : "https://gttodmods.vegapatch.net/NoCavityLines.zip",
+                "Download" : "https://gttodmods.vegapatch.net/RemoveCavityLines.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
-                "Files" : ["BepInEx\\plugins\\NoCavityLines.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\NoCavityLines.dll",
+                "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\RemoveCavityLines.dll",
                 "MoreInfoLink" : null
             },
             {

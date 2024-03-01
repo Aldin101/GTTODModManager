@@ -1,4 +1,3 @@
-# Add these functions at the top of your script
 function Install-Mod {
     param (
         [Parameter(Mandatory)]
@@ -12,6 +11,12 @@ function Install-Mod {
     if (!(Test-Path $gameFolder)) {
         return
     }
+
+    $ErrorActionPreference = "SilentlyContinue"
+    if ((Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion -eq $mod.Version) {
+        return
+    }
+    $ErrorActionPreference = "Continue"
 
     $zipFile = Join-Path $env:TEMP "$modName.zip"
     try {

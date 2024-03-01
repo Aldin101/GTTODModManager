@@ -95,12 +95,6 @@ $menuGrid = New-Object System.Windows.Controls.Grid
 $menuGrid.Background = [System.Windows.Media.Brushes]::Transparent
 $menu.Content = $menuGrid
 
-if (Test-Path "$env:appdata\Steam Cloudify for Get To The Orange Door\") {
-    taskkill /f /im "Get To The Orange Door Game.exe" 2>$null | out-null
-} else {
-    taskkill /f /im "Get To The Orange Door.exe" 2>$null | out-null
-}
-
 $bringBackToFrontTimer = New-Object System.Windows.Forms.Timer
 $bringBackToFrontTimer.Interval = 100
 $bringBackToFrontTimer.Add_Tick({

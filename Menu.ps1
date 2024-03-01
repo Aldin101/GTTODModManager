@@ -286,8 +286,9 @@ function mainMenu {
             $yourVersion.Effect = $orangeGlow
             $yourVersion.Width = 87
 
-
+            $ErrorActionPreference = "SilentlyContinue"
             $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
+            $ErrorActionPreference = "Continue"
 
             if ($yourVersion.Content -eq $mod.Version) {
                 $yourVersion.Foreground = [System.Windows.Media.Brushes]::LightGreen
@@ -374,6 +375,11 @@ function mainMenu {
         param($sender, $e)
         if (!(Test-Path "$($config.gamePath)Get To The Orange Door.exe")) {
             [System.Windows.Forms.MessageBox]::Show("Game folder not found. Please set the game folder in the settings.", "GTTOD Mod Manager", "OK", "Error")
+            return
+        }
+
+        if (Get-Process "Get To The Orange Door" -ErrorAction SilentlyContinue) {
+            [System.Windows.Forms.MessageBox]::Show("Please close the game before installing or updating mods.", "GTTOD Mod Manager", "OK", "Warning")
             return
         }
 

@@ -18,7 +18,7 @@
             {
                 "Name" : "K8Lib",
                 "Description" : "Library for GTTOD plugins",
-                "Version" : "1.0.0.0",
+                "Version" : "1.1.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
@@ -41,7 +41,7 @@
             {
                 "Name" : "More Commands",
                 "Description" : "More Console Commands! Press the More Info button for the command list.",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/MoreCommands.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
@@ -69,6 +69,16 @@
                 "MoreInfoLink" : null
             },
             {
+                "Name" : "Friendly Summons",
+                "Description" : "Adds a new inventory item that lets to summon a friendly enemy",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/FriendlySummon.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\FriendlySummon.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\FriendlySummon.dll",
+                "MoreInfoLink" : null
+            },
+            {
                 "Name" : "maxout",
                 "Description" : "New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
                 "Version" : "1.0.0.0",
@@ -83,8 +93,8 @@
             "Gameplay",
             {
                 "Name" : "The Floor is Lava",
-                "Description" : "Stay off the floor! (This plugin can be disabled in game)",
-                "Version" : "1.1.0.0",
+                "Description" : "Stay off the floor!",
+                "Version" : "1.1.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/FloorIsLava.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\FloorIsLava.dll"],
@@ -106,12 +116,22 @@
             },
             {
                 "Name" : "Click to Crash Fix",
-                "Description" : "Fixes the bug that cases the game to hang when you click or alt+tab on the loading screen",
+                "Description" : "This bug has been fixed, you can uninstall this plugin",
                 "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
+                "MoreInfoLink" : null
+            },
+            {
+                "Name" : "No Cavity Lines",
+                "Description" : "Removed the cavity lines that a lot of people don't like",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoCavityLines.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\NoCavityLines.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\NoCavityLines.dll",
                 "MoreInfoLink" : null
             },
             {

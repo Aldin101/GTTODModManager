@@ -409,6 +409,14 @@ function mainMenu {
                 uninstall-mod $mod.Files $config.gamePath
             }
         }
+
+        if (test-path "$env:appdata\GTTOD Mod Manager\BepInEx.cfg") {
+            $global:gameConfig = Get-IniContent "$env:appdata\GTTOD Mod Manager\BepInEx.cfg"
+            Copy-Item "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" "$($config.gamePath)BepInEx\config\BepInEx.cfg" -Force
+        } else {
+            $global:gameConfig = Get-IniContent "$($config.gamePath)BepInEx\config\BepInEx.cfg"
+        }
+
         mainMenu
     })
 

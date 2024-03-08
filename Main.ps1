@@ -28,6 +28,7 @@ try {
     . .\Settings.ps1
     . .\Tutorial.ps1
     . .\MenuImage.ps1
+    . .\IniReader.ps1
     . .\Menu.ps1
 } catch {
     [System.Windows.Forms.MessageBox]::Show("An error occurred while loading program modals, please try again.`n`n$_", "GTTOD Mod Manager", "OK", "Error")
@@ -76,7 +77,13 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
 
 . .\Glow.ps1
 
-# Create a BitmapImage
+if (test-path "$($config.gamePath)BepInEx\config\BepInEx.cfg") {
+    $global:gameConfig = Get-IniContent "$($config.gamePath)BepInEx\config\BepInEx.cfg"
+    Copy-Item "$($config.gamePath)BepInEx\config\BepInEx.cfg" "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" -Force
+} else {
+    $global:gameConfig = $null
+}
+
 $icon = New-Object System.Windows.Media.Imaging.BitmapImage
 $icon.BeginInit()
 $icon.UriSource = New-Object System.Uri('.\Assets\icon.ico', [System.UriKind]::Relative)

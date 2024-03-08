@@ -23,10 +23,11 @@ function settings {
     $settingsLabel.Effect = $menuLabel.Effect
     $menuGrid.Children.Add($settingsLabel)
 
-    $graphicsLabel = New-Object System.Windows.Controls.Label
+    $global:graphicsLabel = New-Object System.Windows.Controls.Label
     $graphicsLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $graphicsLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $graphicsLabel.Margin = New-Object System.Windows.Thickness(250, 40, 0, 0)
+    $graphicsLabel.Margin = New-Object System.Windows.Thickness(220, 40, 0, 0)
+    $graphicsLabel.Width = 200
     $graphicsLabel.Content = "Graphics"
     $graphicsLabel.FontFamily = $chakraPetch
     $graphicsLabel.FontSize = 18
@@ -110,7 +111,8 @@ function settings {
     $global:gamePathLabel = New-Object System.Windows.Controls.Label
     $gamePathLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $gamePathLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $gamePathLabel.Margin = New-Object System.Windows.Thickness(250, 140, 0, 0)
+    $gamePathLabel.Margin = New-Object System.Windows.Thickness(220, 140, 0, 0)
+    $gamePathLabel.Width = 200
     $gamePathLabel.Content = "Game Path"
     $gamePathLabel.FontFamily = $chakraPetch
     $gamePathLabel.FontSize = 18
@@ -146,6 +148,55 @@ function settings {
         $global:config.gamePath = $gamePathTextBox.Text
         $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
     })
-
     $menuGrid.Children.Add($gamePathTextBox)
+
+    $global:gameOptionsLabel = New-Object System.Windows.Controls.Label
+    $gameOptionsLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
+    $gameOptionsLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
+    $gameOptionsLabel.Margin = New-Object System.Windows.Thickness(220, 220, 0, 0)
+    $gameOptionsLabel.Width = 200
+    $gameOptionsLabel.Content = "Game Options"
+    $gameOptionsLabel.FontFamily = $chakraPetch
+    $gameOptionsLabel.FontSize = 18
+    $gameOptionsLabel.Foreground = [System.Windows.Media.Brushes]::White
+    $gameOptionsLabel.HorizontalContentAlignment = [System.Windows.HorizontalAlignment]::Center
+    $gameOptionsLabel.VerticalContentAlignment = [System.Windows.VerticalAlignment]::Center
+    $gameOptionsLabel.Effect = $settingsLabel.Effect
+    $menuGrid.Children.Add($gameOptionsLabel)
+
+    $global:consoleCheckBox = New-Object System.Windows.Controls.CheckBox
+    $consoleCheckBox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
+    $consoleCheckBox.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
+    $consoleCheckBox.Margin = New-Object System.Windows.Thickness(22, 260, 0, 0)
+    $consoleCheckBox.Width = 200
+    $consoleCheckBox.Height = 30
+    $consoleCheckBox.Content = "Console"
+    $consoleCheckBox.FontFamily = $chakraPetch
+    $consoleCheckBox.FontSize = 14
+    $consoleCheckBox.Foreground = [System.Windows.Media.Brushes]::White
+    $consoleCheckBox.Effect = $settingsLabel.Effect
+
+    if ($gameConfig -ne $null) {
+        if ($gameConfig."Logging.Console".Enabled -eq "false") {
+            $consoleCheckBox.IsChecked = $false
+        } else {
+            $consoleCheckBox.IsChecked = $true
+        }
+    } else {
+        $consoleCheckBox.IsChecked = $false
+        $consoleCheckBox.IsEnabled = $false
+    }
+
+    $consoleCheckBox.Add_Checked({
+        $global:gameConfig."Logging.Console".Enabled = "true"
+        Write-IniContent "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" $gameConfig
+        Copy-Item "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" "$($config.gamePath)BepInEx\config\BepInEx.cfg" -Force
+    })
+
+    $consoleCheckBox.Add_Unchecked({
+        $global:gameConfig."Logging.Console".Enabled = "false"
+        Write-IniContent "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" $gameConfig
+        Copy-Item "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" "$($config.gamePath)BepInEx\config\BepInEx.cfg" -Force
+    })
+    $menuGrid.Children.Add($consoleCheckBox)
 }

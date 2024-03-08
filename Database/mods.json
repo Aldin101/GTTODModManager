@@ -43,7 +43,7 @@
                 "Description" : "Feeling nostalgic? This plugin brings back the in-game chat, just like old times!",
                 "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/GlobalChat.zip",
-                "Dependencies" : ["BepInEx", "UpdateNotifications"],
+                "Dependencies" : ["BepInEx", "Update Notifications"],
                 "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
                 "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat"

@@ -24,6 +24,16 @@
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll",
                 "MoreInfoLink" : "https://github.com/ALdin101/K8Lib"
+            },
+            {
+                "Name" : "Update Notifications",
+                "Description" : "Checks if all of your plugins are up to date, and gives you a notification if they are not",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/UpdateNotifications.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\UpdateNotifications.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\UpdateNotifications.dll",
+                "MoreInfoLink" : null
             }
         ],
         [
@@ -33,7 +43,7 @@
                 "Description" : "Feeling nostalgic? This plugin brings back the in-game chat, just like old times!",
                 "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/GlobalChat.zip",
-                "Dependencies" : ["BepInEx"],
+                "Dependencies" : ["BepInEx", "UpdateNotifications"],
                 "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
                 "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat"

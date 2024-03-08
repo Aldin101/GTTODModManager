@@ -49,6 +49,16 @@
                 "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands"
             },
             {
+                "Name" : "First Person Deaths",
+                "Description" : "Replaces the ragdoll death with first person death animations! There are 3 unique animations for different situations.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/FirstPersonDeaths.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\FirstPersonDeaths.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\FirstPersonDeaths.dll",
+                "MoreInfoLink" : null
+            },
+            {
                 "Name" : "No Hands",
                 "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
                 "Version" : "1.0.0.0",
@@ -166,6 +176,16 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\3.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\3.dll",
+                "MoreInfoLink" : null
+            },
+            {
+                "Name" : "Trip and Fall",
+                "Description" : "Adds random trip to the game",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/TripAndFall.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\TripAndFall.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\TripAndFall.dll",
                 "MoreInfoLink" : null
             }
         ]

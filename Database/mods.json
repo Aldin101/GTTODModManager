@@ -97,6 +97,16 @@
                 "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
                 "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout"
+            },
+            {
+                "Name" : "Old Logo",
+                "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
+                "MoreInfoLink" : null
             }
         ],
         [

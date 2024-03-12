@@ -1,0 +1,214 @@
+{
+    "mods" : [
+            [
+                "Core",
+                {
+                    "Name" : "BepInEx",
+                    "Description" : "The mod loader, this is needed for mods to work",
+                    "Version" : "5.4.22.0",
+                    "Download" : "https://gttodmods.vegapatch.net/BepInEx.zip",
+                    "Dependencies" : [],
+                    "Files" : [
+                        "winhttp.dll",
+                        "BepInEx\\"
+                    ],
+                    "VersionInfoFile" : "BepInEx\\core\\BepInEx.dll",
+                    "MoreInfoLink" : "https://github.com/BepInEx/BepInEx"
+                },
+                {
+                    "Name" : "K8Lib",
+                    "Description" : "Library for GTTOD plugins",
+                    "Version" : "1.1.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll",
+                    "MoreInfoLink" : "https://github.com/ALdin101/K8Lib"
+                },
+                {
+                    "Name" : "Update Notifications",
+                    "Description" : "Checks if all of your plugins are up to date, and gives you a notification if they are not",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/UpdateNotifications.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\UpdateNotifications.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\UpdateNotifications.dll",
+                    "MoreInfoLink" : null
+                }
+            ],
+            [
+                "Features",
+                {
+                    "Name" : "Global Chat",
+                    "Description" : "Feeling nostalgic? This plugin brings back the in-game chat, just like old times!",
+                    "Version" : "1.1.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/GlobalChat.zip",
+                    "Dependencies" : ["BepInEx", "Update Notifications"],
+                    "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
+                    "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat"
+                },
+                {
+                    "Name" : "More Commands",
+                    "Description" : "More Console Commands! Press the More Info button for the command list.",
+                    "Version" : "1.0.3.0",
+                    "Download" : "https://gttodmods.vegapatch.net/MoreCommands.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll",
+                    "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands"
+                },
+                {
+                    "Name" : "First Person Deaths",
+                    "Description" : "Replaces the ragdoll death with first person death animations! There are 3 unique animations for different situations.",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/FirstPersonDeaths.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\FirstPersonDeaths.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\FirstPersonDeaths.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "No Hands",
+                    "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
+                    "Version" : "1.0.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\NoHands.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Loop",
+                    "Description" : "Lets you loop on the dev brach, this plugin will be removed when Andrew adds it back to the game.",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\loop.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\loop.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Friendly Summons",
+                    "Description" : "Adds a new inventory item that lets to summon a friendly enemy",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/FriendlySummon.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\FriendlySummon.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\FriendlySummon.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "maxout",
+                    "Description" : "New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/maxout.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
+                    "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout"
+                },
+                {
+                    "Name" : "Old Logo",
+                    "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
+                    "Version" : "1.0.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
+                    "MoreInfoLink" : null
+                }
+            ],
+            [
+                "Gameplay",
+                {
+                    "Name" : "The Floor is Lava",
+                    "Description" : "Stay off the floor!",
+                    "Version" : "1.1.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/FloorIsLava.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\FloorIsLava.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\FloorIsLava.dll",
+                    "MoreInfoLink" : null
+                }
+            ],
+            [
+                "Quality of Life",
+                {
+                    "Name" : "Dark Theme",
+                    "Description" : "Dark theme for all you Discord mods",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/DarkTheme.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Click to Crash Fix",
+                    "Description" : "This bug has been fixed, you can uninstall this plugin",
+                    "Version" : "1.0.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Remove Cavity Lines",
+                    "Description" : "Removes the cavity lines that a lot of people don't like",
+                    "Version" : "1.0.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/RemoveCavityLines.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\RemoveCavityLines.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Faster Mods",
+                    "Description" : "Makes mods load faster, also makes it so that the game does not need to fully restart on reload",
+                    "Version" : "1.0.1.0",
+                    "Download" : "https://gttodmods.vegapatch.net/FasterMods.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\FasterMods.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Quick Waystation",
+                    "Description" : "Makes the waystation doors open as soon as the level is loaded",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/QuickWaystation.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\QuickWaystation.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\QuickWaystation.dll",
+                    "MoreInfoLink" : null
+                }
+    
+            ],
+            [
+                "Memes",
+                {
+                    "Name" : "3",
+                    "Description" : "Replaces most in-game text with :3, or a string of your choice",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/3.zip",
+                    "Dependencies" : ["BepInEx", "K8Lib"],
+                    "Files" : ["BepInEx\\plugins\\3.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\3.dll",
+                    "MoreInfoLink" : null
+                },
+                {
+                    "Name" : "Trip and Fall",
+                    "Description" : "Adds random trip to the game",
+                    "Version" : "1.0.0.0",
+                    "Download" : "https://gttodmods.vegapatch.net/TripAndFall.zip",
+                    "Dependencies" : ["BepInEx"],
+                    "Files" : ["BepInEx\\plugins\\TripAndFall.dll"],
+                    "VersionInfoFile" : "BepInEx\\plugins\\TripAndFall.dll",
+                    "MoreInfoLink" : null
+                }
+            ]
+        ]
+    }
+    

@@ -111,7 +111,7 @@
             {
                 "Name" : "Old Logo",
                 "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\OldLogo.dll"],

@@ -71,7 +71,7 @@
             {
                 "Name" : "No Hands",
                 "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\NoHands.dll"],

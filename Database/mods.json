@@ -167,7 +167,7 @@
             {
                 "Name" : "Faster Mods",
                 "Description" : "Makes mods load faster, also makes it so that the game does not need to fully restart on reload",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/FasterMods.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FasterMods.dll"],

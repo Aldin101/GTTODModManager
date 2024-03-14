@@ -139,6 +139,7 @@ function mainMenu {
     $listBox.FontFamily = $chakraPetch
     $listBox.FontSize = 12
     $listBox.BorderThickness = New-Object System.Windows.Thickness(0)
+    [System.Windows.Controls.ScrollViewer]::SetCanContentScroll($listBox, $false)
 
     $listBox.Add_SelectionChanged({
         param($sender, $e)
@@ -165,6 +166,12 @@ function mainMenu {
             if ($mod -ne $null) {
                 break
             }
+        }
+
+        if ($mod.Deprecated) {
+            [System.Windows.Forms.MessageBox]::Show("This mod is deprecated and is no longer supported.", "GTTOD Mod Manager", "OK", "Warning")
+            $sender.UnselectAll()
+            return
         }
 
         if ($mod.Dependencies) {
@@ -223,7 +230,7 @@ function mainMenu {
     $nameHeader.Content = "Mod Name"
     $nameHeader.Foreground = [System.Windows.Media.Brushes]::White
     $nameHeader.Effect = $orangeGlow
-    $nameHeader.Margin = New-Object System.Windows.Thickness(0, 0, 40, 0)
+    $nameHeader.Margin = New-Object System.Windows.Thickness(0, 0, 83, 0)
 
     $yourVersionHeader = New-Object System.Windows.Controls.Label
     $yourVersionHeader.Content = "Your Version"
@@ -247,6 +254,8 @@ function mainMenu {
     $headerPanel.Children.Add($descriptionHeader)
 
     $listBox.Items.Add($headerPanel)
+
+    $deprecatedPluginsInstalled = $false
 
     foreach ($category in $mods) {
         $stackPanel = New-Object System.Windows.Controls.StackPanel
@@ -279,12 +288,13 @@ function mainMenu {
             $modName.Content = $mod.Name
             $modName.Foreground = [System.Windows.Media.Brushes]::White
             $modName.Effect = $orangeGlow
-            $modName.Width = 120
+            $modName.Width = 150
 
             $yourVersion = New-Object System.Windows.Controls.Label
             $yourVersion.Foreground = [System.Windows.Media.Brushes]::White
             $yourVersion.Effect = $orangeGlow
-            $yourVersion.Width = 87
+            $yourVersion.Width = 70
+            $yourVersion.HorizontalContentAlignment = "Center"
 
             $ErrorActionPreference = "SilentlyContinue"
             $yourVersion.Content = (Get-ChildItem ($config.gamePath + $mod.VersionInfoFile) | Select -Expand VersionInfo).FileVersion
@@ -297,15 +307,20 @@ function mainMenu {
                 $yourVersion.Effect = $redGlow
             }
 
-            if ($yourVersion.Content -eq "" -or $yourVersion.Content -eq $null) {
+            if ($yourVersion.Content -eq "" -or $yourVersion.Content -eq $null -or $mod.Deprecated) {
                 $checkBox.IsChecked = $false
+            }
+
+            if ($mod.Deprecated -and $yourVersion.Content -ne "" -and $yourVersion.Content -ne $null) {
+                $deprecatedPluginsInstalled = $true
             }
 
             $latestVersion = New-Object System.Windows.Controls.Label
             $latestVersion.Content = $mod.Version
             $latestVersion.Foreground = [System.Windows.Media.Brushes]::White
             $latestVersion.Effect = $orangeGlow
-            $latestVersion.Width = 60
+            $latestVersion.Width = 90
+            $latestVersion.HorizontalContentAlignment = "Center"
 
             $modDescription = New-Object System.Windows.Controls.Label
             $modDescription.Content = $mod.Description
@@ -339,7 +354,7 @@ function mainMenu {
                         continue
                     }
                     try {
-                        $stackPanel.children[4].Width = $menu.Width - 420
+                        $stackPanel.children[4].Width = $menu.Width - 465
                     } catch {
                         return
                     }
@@ -354,6 +369,12 @@ function mainMenu {
             $stackPanel.Children.Add($moreInfoButton)
 
             $listBox.Items.Add($stackPanel)
+
+            if ($mod.Deprecated) {
+                $yourVersion.Foreground = [System.Windows.Media.Brushes]::Red
+                $yourVersion.Effect = $redGlow
+                $latestVersion.Content = "Deprecated"
+            }
         }
     }
 
@@ -437,5 +458,36 @@ function mainMenu {
 
     if ($loadSettings) {
         settings
+    }
+
+    if ($deprecatedPluginsInstalled) {
+        $choice = [System.Windows.Forms.MessageBox]::Show("Some of your installed mods are deprecated and are no longer supported. Would you like to remove them?", "GTTOD Mod Manager", "YesNo", "Warning")
+        if ($choice -eq "Yes") {
+            for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
+                if ($listBox.Items[$i].children[0].IsChecked -eq $null) {
+                    continue
+                }
+    
+                $modName = $listBox.Items[$i].children[1].Content
+    
+                $mod = $null
+                foreach ($category in $mods) {
+                    foreach ($modInCategory in $category[1..$category.Length]) {
+                        if ($modInCategory.Name -eq $modName) {
+                            $mod = $modInCategory
+                            break
+                        }
+                    }
+                    if ($mod -ne $null) {
+                        break
+                    }
+                }
+    
+                if ($mod.Deprecated) {
+                    uninstall-mod $mod.Files $config.gamePath
+                }
+            }
+            mainMenu
+        }
     }
 }

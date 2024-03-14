@@ -46,6 +46,7 @@ try {
 
 try {
     $global:mods = ((Invoke-WebRequest -Uri "https://gttodmods.vegapatch.net/mods.json" -UseBasicParsing).Content | ConvertFrom-Json).mods
+    # $global:mods = (Get-Content .\Database\mods.json | ConvertFrom-Json).mods
 } catch {
     [System.Windows.Forms.MessageBox]::Show("An error occurred while loading the online mod list, please check your internet and try again.`n`n$_", "GTTOD Mod Manager", "OK", "Error")
     exit

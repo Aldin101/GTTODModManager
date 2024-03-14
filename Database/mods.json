@@ -13,7 +13,8 @@
                     "BepInEx\\"
                 ],
                 "VersionInfoFile" : "BepInEx\\core\\BepInEx.dll",
-                "MoreInfoLink" : "https://github.com/BepInEx/BepInEx"
+                "MoreInfoLink" : "https://github.com/BepInEx/BepInEx",
+                "Deprecated" : false
             },
             {
                 "Name" : "K8Lib",
@@ -23,7 +24,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\K8Lib.dll",
-                "MoreInfoLink" : "https://github.com/ALdin101/K8Lib"
+                "MoreInfoLink" : "https://github.com/ALdin101/K8Lib",
+                "Deprecated" : false
             },
             {
                 "Name" : "Update Notifications",
@@ -33,7 +35,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\UpdateNotifications.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\UpdateNotifications.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [
@@ -46,7 +49,8 @@
                 "Dependencies" : ["BepInEx", "Update Notifications"],
                 "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
-                "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat"
+                "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat",
+                "Deprecated" : false
             },
             {
                 "Name" : "More Commands",
@@ -56,7 +60,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\MoreCommands.dll",
-                "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands"
+                "MoreInfoLink" : "https://github.com/Aldin101/MoreCommands/?tab=readme-ov-file#morecommands",
+                "Deprecated" : false
             },
             {
                 "Name" : "First Person Deaths",
@@ -66,7 +71,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FirstPersonDeaths.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\FirstPersonDeaths.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "No Hands",
@@ -76,7 +82,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\NoHands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Loop",
@@ -86,7 +93,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\loop.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\loop.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Friendly Summons",
@@ -96,7 +104,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\FriendlySummon.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\FriendlySummon.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "maxout",
@@ -106,7 +115,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
-                "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout"
+                "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout",
+                "Deprecated" : false
             },
             {
                 "Name" : "Old Logo",
@@ -116,7 +126,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [
@@ -129,7 +140,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\FloorIsLava.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\FloorIsLava.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [
@@ -142,17 +154,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll",
-                "MoreInfoLink" : null
-            },
-            {
-                "Name" : "Click to Crash Fix",
-                "Description" : "This bug has been fixed, you can uninstall this plugin",
-                "Version" : "1.0.1.0",
-                "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Remove Cavity Lines",
@@ -162,7 +165,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\RemoveCavityLines.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Faster Mods",
@@ -172,7 +176,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\FasterMods.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Quick Waystation",
@@ -182,7 +187,8 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\QuickWaystation.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\QuickWaystation.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
 
         ],
@@ -196,7 +202,8 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\3.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\3.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             },
             {
                 "Name" : "Trip and Fall",
@@ -206,7 +213,22 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\TripAndFall.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\TripAndFall.dll",
-                "MoreInfoLink" : null
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            }
+        ], 
+        [
+            "Deprecated",
+            {
+                "Name" : "Click to Crash Fix",
+                "Description" : "This bug has been fixed, you can uninstall this plugin",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/ClickToCrashFix.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
             }
         ]
     ]

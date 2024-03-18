@@ -10,7 +10,9 @@
                 "Dependencies" : [],
                 "Files" : [
                     "winhttp.dll",
-                    "BepInEx\\"
+                    "doorstop_config.ini",
+                    "BepInEx\\",
+                    "unstrip\\"
                 ],
                 "VersionInfoFile" : "BepInEx\\core\\BepInEx.dll",
                 "MoreInfoLink" : "https://github.com/BepInEx/BepInEx",

@@ -21,7 +21,7 @@
             {
                 "Name" : "K8Lib",
                 "Description" : "Library for GTTOD plugins",
-                "Version" : "1.1.0.0",
+                "Version" : "2.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
@@ -32,7 +32,7 @@
             {
                 "Name" : "Update Notifications",
                 "Description" : "Checks if all of your plugins are up to date, and gives you a notification if they are not",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/UpdateNotifications.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\UpdateNotifications.dll"],
@@ -57,7 +57,7 @@
             {
                 "Name" : "More Commands",
                 "Description" : "More Console Commands! Press the More Info button for the command list.",
-                "Version" : "1.0.3.0",
+                "Version" : "1.0.4.0",
                 "Download" : "https://gttodmods.vegapatch.net/MoreCommands.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\MoreCommands.dll"],
@@ -68,7 +68,7 @@
             {
                 "Name" : "First Person Deaths",
                 "Description" : "Replaces the ragdoll death with first person death animations! There are 3 unique animations for different situations.",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/FirstPersonDeaths.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FirstPersonDeaths.dll"],
@@ -77,9 +77,20 @@
                 "Deprecated" : false
             },
             {
+                "Name" : "Speedrun UI",
+                "Description" : "Adds (frame rate independent) speedometer and timer",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/SpeedrunUI.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\SpeedrunUI.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\SpeedrunUI.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
                 "Name" : "No Hands",
                 "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\NoHands.dll"],
@@ -88,9 +99,20 @@
                 "Deprecated" : false
             },
             {
+                "Name" : "Outline Only Weapons",
+                "Description" : "Outlines are cool",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/OutlineOnlyWeapons.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\OutlineOnlyWeapons.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\OutlineOnlyWeapons.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
                 "Name" : "Loop",
                 "Description" : "Lets you loop on the dev brach, this plugin will be removed when Andrew adds it back to the game.",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/Loop.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\loop.dll"],
@@ -101,7 +123,7 @@
             {
                 "Name" : "Friendly Summons",
                 "Description" : "Adds a new inventory item that lets to summon a friendly enemy",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/FriendlySummon.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\FriendlySummon.dll"],
@@ -123,7 +145,7 @@
             {
                 "Name" : "Old Logo",
                 "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
@@ -137,7 +159,7 @@
             {
                 "Name" : "The Floor is Lava",
                 "Description" : "Stay off the floor!",
-                "Version" : "1.1.1.0",
+                "Version" : "1.1.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/FloorIsLava.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\FloorIsLava.dll"],
@@ -151,7 +173,7 @@
             {
                 "Name" : "Dark Theme",
                 "Description" : "Dark theme for all you Discord mods",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/DarkTheme.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
@@ -162,7 +184,7 @@
             {
                 "Name" : "Remove Cavity Lines",
                 "Description" : "Removes the cavity lines that a lot of people don't like",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/RemoveCavityLines.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
@@ -173,7 +195,7 @@
             {
                 "Name" : "Faster Mods",
                 "Description" : "Makes mods load faster, also makes it so that the game does not need to fully restart on reload",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/FasterMods.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
@@ -184,22 +206,43 @@
             {
                 "Name" : "Quick Waystation",
                 "Description" : "Makes the waystation doors open as soon as the level is loaded",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/QuickWaystation.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\QuickWaystation.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\QuickWaystation.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
+            },
+            {
+                "Name" : "No LOD",
+                "Description" : "Makes all parts of all levels always loaded, removing pop-in with a framerate penalty",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoLod.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\NoLod.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\NoLod.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
+                "Name" : "Wonderous Speed Fix",
+                "Description" : "Makes all parts of all levels always loaded, removing pop-in with a framerate penalty",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/WonderousSpeedFix.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\WonderousSpeedFix.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\WonderousSpeedFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
-
         ],
         [
             "Memes",
             {
                 "Name" : "3",
                 "Description" : "Replaces most in-game text with :3, or a string of your choice",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/3.zip",
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\3.dll"],
@@ -210,7 +253,7 @@
             {
                 "Name" : "Trip and Fall",
                 "Description" : "Adds random trip to the game",
-                "Version" : "1.0.0.0",
+                "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/TripAndFall.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\TripAndFall.dll"],

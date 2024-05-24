@@ -21,7 +21,7 @@
             {
                 "Name" : "K8Lib",
                 "Description" : "Library for GTTOD plugins",
-                "Version" : "2.0.1.0",
+                "Version" : "2.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],

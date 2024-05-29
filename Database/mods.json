@@ -224,17 +224,6 @@
                 "VersionInfoFile" : "BepInEx\\plugins\\NoLod.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
-            },
-            {
-                "Name" : "Wonderous Speed Fix",
-                "Description" : "Makes all parts of all levels always loaded, removing pop-in with a framerate penalty",
-                "Version" : "1.0.1.0",
-                "Download" : "https://gttodmods.vegapatch.net/WonderousSpeedFix.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\WonderousSpeedFix.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\WonderousSpeedFix.dll",
-                "MoreInfoLink" : null,
-                "Deprecated" : false
             }
         ],
         [
@@ -272,6 +261,17 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\ClickToCrashFix.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\ClickToCrashFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "Wonderous Speed Fix",
+                "Description" : "Makes all parts of all levels always loaded, removing pop-in with a framerate penalty",
+                "Version" : "1.0.1.0",
+                "Download" : "https://gttodmods.vegapatch.net/WonderousSpeedFix.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\WonderousSpeedFix.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\WonderousSpeedFix.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : true
             }

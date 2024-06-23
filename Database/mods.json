@@ -215,17 +215,6 @@
                 "Deprecated" : false
             },
             {
-                "Name" : "Water Fix",
-                "Description" : "Fixes the bug that can cause the player to keep swimming if they do not exit water properly",
-                "Version" : "1.0.0.0",
-                "Download" : "https://gttodmods.vegapatch.net/NoLod.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\WaterFix.dll","BepInEx\\patchers\\WaterFixPreloader.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\WaterFix.dll",
-                "MoreInfoLink" : null,
-                "Deprecated" : false
-            },
-            {
                 "Name" : "No Ludeo",
                 "Description" : "Removes Ludeo from the game, this gives a noticeable performance boost",
                 "Version" : "1.0.0.0",
@@ -305,6 +294,17 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\NoHands.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "Water Fix",
+                "Description" : "This bug has been fixed, you can uninstall this plugin",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoLod.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\WaterFix.dll","BepInEx\\patchers\\WaterFixPreloader.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\WaterFix.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : true
             }

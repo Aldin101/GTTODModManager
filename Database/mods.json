@@ -21,7 +21,7 @@
             {
                 "Name" : "K8Lib",
                 "Description" : "Library for GTTOD plugins",
-                "Version" : "2.0.2.0",
+                "Version" : "2.0.3.0",
                 "Download" : "https://gttodmods.vegapatch.net/K8Lib.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\K8Lib.dll"],
@@ -84,17 +84,6 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\SpeedrunUI.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\SpeedrunUI.dll",
-                "MoreInfoLink" : null,
-                "Deprecated" : false
-            },
-            {
-                "Name" : "No Hands",
-                "Description" : "Removes your hands when the rune of relaxation is active, just like it was teased",
-                "Version" : "1.0.2.0",
-                "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\NoHands.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
             },
@@ -189,17 +178,6 @@
                 "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\DarkTheme.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\DarkTheme.dll",
-                "MoreInfoLink" : null,
-                "Deprecated" : false
-            },
-            {
-                "Name" : "Remove Cavity Lines",
-                "Description" : "Removes the cavity lines that a lot of people don't like",
-                "Version" : "1.0.2.0",
-                "Download" : "https://gttodmods.vegapatch.net/RemoveCavityLines.zip",
-                "Dependencies" : ["BepInEx", "K8Lib"],
-                "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\RemoveCavityLines.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
             },
@@ -305,6 +283,28 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\WonderousSpeedFix.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\WonderousSpeedFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "Remove Cavity Lines",
+                "Description" : "This has been added as an option in the game settings, you can uninstall this plugin",
+                "Version" : "1.0.2.0",
+                "Download" : "https://gttodmods.vegapatch.net/RemoveCavityLines.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\RemoveCavityLines.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\RemoveCavityLines.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "No Hands",
+                "Description" : "Andrew improved cozy mode a ton!!!! Thanks, you can uninstall this plugin",
+                "Version" : "1.0.2.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoHands.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\NoHands.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\NoHands.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : true
             }

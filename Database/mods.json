@@ -182,17 +182,6 @@
                 "Deprecated" : false
             },
             {
-                "Name" : "Faster Mods",
-                "Description" : "Makes mods load faster, also makes it so that the game does not need to fully restart on reload",
-                "Version" : "1.0.2.0",
-                "Download" : "https://gttodmods.vegapatch.net/FasterMods.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\FasterMods.dll",
-                "MoreInfoLink" : null,
-                "Deprecated" : false
-            },
-            {
                 "Name" : "Quick Waystation",
                 "Description" : "Makes the waystation doors open as soon as the level is loaded",
                 "Version" : "1.0.1.0",
@@ -305,6 +294,17 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\WaterFix.dll","BepInEx\\patchers\\WaterFixPreloader.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\WaterFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "Faster Mods",
+                "Description" : "Andrew everything from this plugin into the game. Thanks Andrew. You can uninstall this plugin",
+                "Version" : "1.0.2.0",
+                "Download" : "https://gttodmods.vegapatch.net/FasterMods.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\FasterMods.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : true
             }

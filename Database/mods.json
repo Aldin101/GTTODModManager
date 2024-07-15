@@ -161,7 +161,7 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\ChainPhysics.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\ChainPhysics.dll",
-                "MoreInfoLink" : null,
+                "MoreInfoLink" : "https://steamcommunity.com/sharedfiles/filedetails/?id=3290022030",
                 "Deprecated" : false
             }
         ],

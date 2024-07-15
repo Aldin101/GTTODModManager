@@ -152,6 +152,17 @@
                 "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
+            },
+            {
+                "Name" : "Chain Physics",
+                "Description" : "Adds support for really good chain physics for workshop guns, doesn't do anything on its own",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/ChainPhysics.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\ChainPhysics.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\ChainPhysics.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [

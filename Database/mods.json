@@ -224,6 +224,17 @@
                 "VersionInfoFile" : "BepInEx\\plugins\\NoLudeo.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
+            },
+            {
+                "Name" : "Adaptive Intractable Glow",
+                "Description" : "Allows for intractable objects dim or stop glowing when looted",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/AdaptiveInteractableGlow.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\AdaptiveIntractableGlow.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\AdaptiveIntractableGlow.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [
@@ -247,6 +258,28 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\TripAndFall.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\TripAndFall.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
+                "Name" : "Reddit Gold Gag",
+                "Description" : "Replaces Grab-A-Gun videos",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/RedditGoldGag.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\RedditGoldGag.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\RedditGoldGag.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
+                "Name" : "Gyatt",
+                "Description" : "Restores Doorguy's gyatt to it's former glory and gives it physics. (doesn't work with first person deaths)",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/Gyatt.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\Gyatt.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\Gyatt.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
             }

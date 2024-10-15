@@ -118,6 +118,8 @@ function mainMenu {
 
     $backButton.Visibility = "Hidden"
 
+    $global:menuGrid.Effect = $gridGlow
+
     $global:menuLabel = New-Object System.Windows.Controls.Label
     $menuLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
     $menuLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Center

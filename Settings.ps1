@@ -71,15 +71,56 @@ function settings {
         }
 
         . .\Glow.ps1
+
+        $menuGrid.Effect = $gridGlow
     })
 
     $glowCheckbox.Effect = $settingsLabel.Effect
     $menuGrid.Children.Add($glowCheckbox)
 
+    $fancyGlowCheckbox = New-Object System.Windows.Controls.CheckBox
+    $fancyGlowCheckbox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
+    $fancyGlowCheckbox.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
+    $fancyGlowCheckbox.Margin = New-Object System.Windows.Thickness(22, 110, 0, 0)
+    $fancyGlowCheckbox.Width = 200
+    $fancyGlowCheckbox.Height = 30
+    $fancyGlowCheckbox.Content = "Fancy Glow"
+    $fancyGlowCheckbox.FontFamily = $chakraPetch
+    $fancyGlowCheckbox.FontSize = 14
+    $fancyGlowCheckbox.Foreground = [System.Windows.Media.Brushes]::White
+    $fancyGlowCheckbox.IsChecked = $config.fancyGlow
+
+    $fancyGlowCheckbox.Add_Checked({
+        $global:config.fancyGlow = $true
+        $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
+
+        . .\Glow.ps1
+
+        mainMenu $true
+    })
+
+    $fancyGlowCheckbox.Add_Unchecked({
+        $global:config.fancyGlow = $false
+        $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
+
+        foreach ($control in $menuGrid.Children) {
+            $control.Effect = $null
+            foreach ($child in $control.Items.Children) {
+                $child.Effect = $null
+            }
+        }
+
+        . .\Glow.ps1
+        $menuGrid.Effect = $gridGlow
+    })
+
+    $fancyGlowCheckbox.Effect = $settingsLabel.Effect
+    $menuGrid.Children.Add($fancyGlowCheckbox)
+
     $global:backgroundsCheckbox = New-Object System.Windows.Controls.CheckBox
     $backgroundsCheckbox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $backgroundsCheckbox.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $backgroundsCheckbox.Margin = New-Object System.Windows.Thickness(22, 110, 0, 0)
+    $backgroundsCheckbox.Margin = New-Object System.Windows.Thickness(22, 140, 0, 0)
     $backgroundsCheckbox.Width = 200
     $backgroundsCheckbox.Height = 30
     $backgroundsCheckbox.Content = "Backgrounds"
@@ -111,7 +152,7 @@ function settings {
     $global:gamePathLabel = New-Object System.Windows.Controls.Label
     $gamePathLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $gamePathLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $gamePathLabel.Margin = New-Object System.Windows.Thickness(220, 140, 0, 0)
+    $gamePathLabel.Margin = New-Object System.Windows.Thickness(220, 160, 0, 0)
     $gamePathLabel.Width = 200
     $gamePathLabel.Content = "Game Path"
     $gamePathLabel.FontFamily = $chakraPetch
@@ -125,7 +166,7 @@ function settings {
     $global:gamePathTextBox = New-Object System.Windows.Controls.TextBox
     $gamePathTextBox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $gamePathTextBox.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $gamePathTextBox.Margin = New-Object System.Windows.Thickness(22, 180, 0, 0)
+    $gamePathTextBox.Margin = New-Object System.Windows.Thickness(22, 200, 0, 0)
     $gamePathTextBox.Width = 600
     $gamePathTextBox.Height = 30
     $gamePathTextBox.FontFamily = $chakraPetch
@@ -160,7 +201,7 @@ function settings {
     $global:gameOptionsLabel = New-Object System.Windows.Controls.Label
     $gameOptionsLabel.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $gameOptionsLabel.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $gameOptionsLabel.Margin = New-Object System.Windows.Thickness(220, 220, 0, 0)
+    $gameOptionsLabel.Margin = New-Object System.Windows.Thickness(220, 240, 0, 0)
     $gameOptionsLabel.Width = 200
     $gameOptionsLabel.Content = "Game Options"
     $gameOptionsLabel.FontFamily = $chakraPetch
@@ -174,7 +215,7 @@ function settings {
     $global:consoleCheckBox = New-Object System.Windows.Controls.CheckBox
     $consoleCheckBox.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Left
     $consoleCheckBox.VerticalAlignment = [System.Windows.VerticalAlignment]::Top
-    $consoleCheckBox.Margin = New-Object System.Windows.Thickness(22, 260, 0, 0)
+    $consoleCheckBox.Margin = New-Object System.Windows.Thickness(22, 280, 0, 0)
     $consoleCheckBox.Width = 200
     $consoleCheckBox.Height = 30
     $consoleCheckBox.Content = "Console"

@@ -57,6 +57,7 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
     New-Item -ItemType Directory -Path "$env:appdata\GTTOD Mod Manager" | Out-Null
     $global:config = @{
         "glow" = $true
+        "fancyGlow" = $false
         "backgrounds" = $true
         "gamePath" = findGamePath
     }
@@ -68,12 +69,23 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
     } catch {
         $global:config = @{
             "glow" = $true
+            "fancyGlow" = $false
             "backgrounds" = $true
             "gamePath" = findGamePath
         }
         $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
         $global:tutorial = $true
     }
+}
+
+if ($config.fancyGlow -eq $null) {
+    $global:config = @{
+        "glow" = $config.glow
+        "fancyGlow" = $false
+        "backgrounds" = $config.backgrounds
+        "gamePath" = $config.gamePath
+    }
+    $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
 }
 
 . .\Glow.ps1

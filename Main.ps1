@@ -66,6 +66,10 @@ if (!(test-path "$env:appdata\GTTOD Mod Manager\config.json")) {
 } else {
     try {
         $global:config = Get-Content "$env:appdata\GTTOD Mod Manager\config.json" | ConvertFrom-Json
+        if (!(Test-Path $config.gamePath)) {
+            $config.gamePath = findGamePath
+            $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
+        }
     } catch {
         $global:config = @{
             "glow" = $true

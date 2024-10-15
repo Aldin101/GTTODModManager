@@ -24,10 +24,13 @@ function findGamePath {
     $joinedLine = [regex]::Replace($joinedLine, '\}(\s*\n\s*\")', '},$1', "Multiline")
     $joinedLine = [regex]::Replace($joinedLine, '\"\,(\n\s*\})', '"$1', "Multiline")
     $joinedLine = $joinedLine -replace ',(\s*[\]}])', '$1'
-    $libaryfolders = $joinedLine | ConvertFrom-Json
+    $libaryfolders = ($joinedLine | ConvertFrom-Json)
 
-    foreach ($folder in $libaryfolders) {
-        $gamePath = "$steamPath\steamapps\common\Get To The Orange Door\"
+    for ($i = 0; $true; $i++) {
+        $gamePath = "$($libaryfolders.libraryfolders.$i.path)\steamapps\common\Get To The Orange Door\"
+        if (!(Test-Path $gamePath)) {
+            break
+        }
         if (Test-Path $gamePath) {
             return $gamePath.Replace("\", "/")
         }

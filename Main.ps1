@@ -111,6 +111,17 @@ $bringBackToFrontTimer.Add_Tick({
 
     $menuGrid.Children.Remove($settingsButton)
     $menuGrid.Children.Add($settingsButton)
+
+    foreach ($stackPanel in $listBox.Items) {
+        if ($stackPanel.children[5].Width -eq $null) {
+            continue
+        }
+        try {
+            $stackPanel.children[4].Width = $menu.ActualWidth - 465
+        } catch {
+            return
+        }
+    }
 })
 $bringBackToFrontTimer.Start()
 
@@ -118,3 +129,5 @@ setMenuImageMp4 ".\Assets\Backgrounds\MainMenu.mp4"
 mainMenu
 
 $menu.ShowDialog()
+
+$bringBackToFrontTimer.Stop()

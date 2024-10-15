@@ -141,6 +141,21 @@ function mainMenu {
     $listBox.BorderThickness = New-Object System.Windows.Thickness(0)
     [System.Windows.Controls.ScrollViewer]::SetCanContentScroll($listBox, $false)
 
+    $listBox.Add_SizeChanged({
+        param($sender, $e)
+
+        foreach ($stackPanel in $sender.Items) {
+            if ($stackPanel.children[5].Width -eq $null) {
+                continue
+            }
+            try {
+                $stackPanel.children[4].Width = $menu.Width - 465
+            } catch {
+                return
+            }
+        }
+    })
+
     $listBox.Add_SelectionChanged({
         param($sender, $e)
 
@@ -367,21 +382,6 @@ function mainMenu {
             if ($mod.MoreInfoLink -eq $null) {
                 $moreInfoButton.Visibility = "hidden"
             }
-
-            $listBox.Add_SizeChanged({
-                param($sender, $e)
-
-                foreach ($stackPanel in $sender.Items) {
-                    if ($stackPanel.children[5].Width -eq $null) {
-                        continue
-                    }
-                    try {
-                        $stackPanel.children[4].Width = $menu.Width - 465
-                    } catch {
-                        return
-                    }
-                }
-            })
 
             $stackPanel.Children.Add($checkBox)
             $stackPanel.Children.Add($modName)

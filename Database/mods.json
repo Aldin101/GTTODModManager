@@ -51,7 +51,7 @@
                 "Dependencies" : ["BepInEx", "Update Notifications"],
                 "Files" : ["BepInEx\\plugins\\GlobalChat.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\GlobalChat.dll",
-                "MoreInfoLink" : "https://github.com/ALdin101/GTTODGlobalChat",
+                "MoreInfoLink" : "https://github.com/Aldin101/GTTOD-Global-Chat",
                 "Deprecated" : false
             },
             {

@@ -311,6 +311,28 @@ function mainMenu {
                 $checkBox.IsChecked = $false
             }
 
+            $hasDependent = $false
+            foreach ($category in $mods) {
+                foreach ($dependentMod in $category[1..$category.Length]) {
+                    if (!(Test-Path ($config.gamePath + $dependentMod.VersionInfoFile))) {
+                        continue
+                    }
+                    foreach ($dependency in $dependentMod.Dependencies) {
+                        if ($dependency -eq $mod.Name) {
+                            $hasDependent = $true
+                        }
+                    }
+                }
+            }
+
+            if ($hasDependent -and !$checkBox.IsChecked) {
+                $checkBox.IsChecked = $true
+                $yourVersion.Content = "Not Installed"
+                $yourVersion.FontSize = 10
+                $yourVersion.Foreground = [System.Windows.Media.Brushes]::Red
+                $yourVersion.Effect = $redGlow
+            }
+
             if ($mod.Deprecated -and $yourVersion.Content -ne "" -and $yourVersion.Content -ne $null) {
                 $deprecatedPluginsInstalled = $true
             }
@@ -404,6 +426,10 @@ function mainMenu {
             return
         }
 
+        $global:progressBar.Visibility = "Visible"
+        $menu.Dispatcher.Invoke([System.Windows.Threading.DispatcherPriority]::Render, [action]{
+        })
+
         for ($i = 0; $i -lt $listBox.Items.Count; $i++) {
             if ($listBox.Items[$i].children[0].IsChecked -eq $null) {
                 continue
@@ -429,12 +455,16 @@ function mainMenu {
             } else {
                 uninstall-mod $mod.Files $config.gamePath
             }
+
+            $global:progressBar.Value = ($i + 1) / $listBox.Items.Count * 100
+            $menu.Dispatcher.Invoke([System.Windows.Threading.DispatcherPriority]::Render, [action]{
+            })
         }
 
-        if (test-path "$env:appdata\GTTOD Mod Manager\BepInEx.cfg") {
+        if ((test-path "$env:appdata\GTTOD Mod Manager\BepInEx.cfg") -and (test-path "$($config.gamePath)BepInEx\config\")) {
             $global:gameConfig = Get-IniContent "$env:appdata\GTTOD Mod Manager\BepInEx.cfg"
             Copy-Item "$env:appdata\GTTOD Mod Manager\BepInEx.cfg" "$($config.gamePath)BepInEx\config\BepInEx.cfg" -Force
-        } else {
+        } elseif (test-path "$($config.gamePath)BepInEx\config\BepInEx.cfg") {
             $global:gameConfig = Get-IniContent "$($config.gamePath)BepInEx\config\BepInEx.cfg"
         }
 
@@ -442,6 +472,18 @@ function mainMenu {
     })
 
     $menuGrid.Children.Add($installButton)
+
+    $global:progressBar = New-Object System.Windows.Controls.ProgressBar
+    $progressBar.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Right
+    $progressBar.VerticalAlignment = [System.Windows.VerticalAlignment]::Bottom
+    $progressBar.Width = 150
+    $progressBar.Height = 30
+    $progressBar.Margin = New-Object System.Windows.Thickness(0, 0, 0, 0)
+    $progressBar.Background = [System.Windows.Media.Brushes]::Black
+    $progressBar.Foreground = [System.Windows.Media.Brushes]::White
+    $progressBar.Visibility = "Hidden"
+
+    $menuGrid.Children.Add($progressBar)
 
     if ($tutorial) {
         $tutorialMessages = @(

@@ -138,6 +138,13 @@ function settings {
     $gamePathTextBox.Effect = $settingsLabel.Effect
 
     $gamePathTextBox.Add_TextChanged({
+        if (Test-Path "$($gamePathTextBox.Text)\Get To The Orange Door.exe") {
+            $gamePathTextBox.Foreground = [System.Windows.Media.Brushes]::LightGreen
+            $global:config.gamePath = "$($gamePathTextBox.Text)\"
+            $config | ConvertTo-Json | Set-Content "$env:appdata\GTTOD Mod Manager\config.json"
+            return;
+        }
+
         if (!(Test-Path "$($gamePathTextBox.Text)Get To The Orange Door.exe")) {
             $gamePathTextBox.Foreground = [System.Windows.Media.Brushes]::Red
             return;

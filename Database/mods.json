@@ -92,7 +92,7 @@
                 "Description" : "Outlines are cool",
                 "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/OutlineOnlyWeapons.zip",
-                "Dependencies" : ["BepInEx"],
+                "Dependencies" : ["BepInEx", "K8Lib"],
                 "Files" : ["BepInEx\\plugins\\OutlineOnlyWeapons.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\OutlineOnlyWeapons.dll",
                 "MoreInfoLink" : null,

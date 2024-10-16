@@ -90,7 +90,7 @@
             {
                 "Name" : "Outline Only Weapons",
                 "Description" : "Outlines are cool",
-                "Version" : "1.0.1.0",
+                "Version" : "1.0.2.0",
                 "Download" : "https://gttodmods.vegapatch.net/OutlineOnlyWeapons.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\OutlineOnlyWeapons.dll"],
@@ -200,6 +200,17 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\QuickWaystation.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\QuickWaystation.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
+                "Name" : "Quick Load",
+                "Description" : "Making the loading screen after selecting a save a lot faster.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/QuickLoad.zip",
+                "Dependencies" : ["BepInEx", "No Ludeo"],
+                "Files" : ["BepInEx\\plugins\\QuickLoad.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\QuickLoad.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
             },

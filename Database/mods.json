@@ -140,7 +140,7 @@
                 "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
                 "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout",
-                "Deprecated" : true
+                "Deprecated" : false
             },
             {
                 "Name" : "Old Logo",

@@ -132,15 +132,15 @@
                 "Deprecated" : false
             },
             {
-                "Name" : "maxout",
-                "Description" : "New from BSMNTEC Software Division 17, 1979D3. MAXOUT, max out your Aspects with a single click! Click the More Info for usage.",
+                "Name" : "Maxout",
+                "Description" : "Simple utility to quickly max-out or reset aspects. Click the More Info for usage.",
                 "Version" : "1.0.0.0",
                 "Download" : "https://gttodmods.vegapatch.net/maxout.zip",
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\com.bsmntec.maxout.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\com.bsmntec.maxout.dll",
                 "MoreInfoLink" : "https://github.com/bsmntoid/com.bsmntec.maxout",
-                "Deprecated" : false
+                "Deprecated" : true
             },
             {
                 "Name" : "Old Logo",

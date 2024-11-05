@@ -143,13 +143,13 @@
                 "Deprecated" : false
             },
             {
-                "Name" : "Old Logo",
-                "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
-                "Version" : "1.0.2.0",
-                "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
-                "Dependencies" : ["BepInEx"],
-                "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
-                "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
+                "Name" : "Alternate Logos",
+                "Description" : "Allows you to pick a different main menu logo in settings, including the old one and WOKE!",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/AlternateLogos.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\AlternateLogos.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\AlternateLogos.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
             },
@@ -360,6 +360,17 @@
                 "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\FasterMods.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\FasterMods.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : true
+            },
+            {
+                "Name" : "Old Logo",
+                "Description" : "Swaps the GTTOD logo on the main menu out for the old one",
+                "Version" : "1.0.2.0",
+                "Download" : "https://gttodmods.vegapatch.net/OldLogo.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\OldLogo.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\OldLogo.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : true
             }

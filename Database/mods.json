@@ -39,6 +39,17 @@
                 "VersionInfoFile" : "BepInEx\\plugins\\UpdateNotifications.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
+            },
+            {
+                "Name" : "Save Corruption Fix",
+                "Description" : "Fixes a bug that can cause the game to black screen after loading workshop mods.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/SaveCorruptionFix.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\plugins\\SaveCorruptionFix.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\SaveCorruptionFix.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
             }
         ],
         [

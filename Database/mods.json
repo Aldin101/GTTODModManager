@@ -273,6 +273,17 @@
                 "Deprecated" : false
             },
             {
+                "Name" : "Moan",
+                "Description" : "Makes enemies moan on melee hit, commissioned by GlennTheDroid",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/Moan.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\Moan.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\Moan.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
                 "Name" : "Trip and Fall",
                 "Description" : "Adds random trip to the game",
                 "Version" : "1.0.1.0",

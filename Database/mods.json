@@ -248,6 +248,17 @@
                 "Deprecated" : false
             },
             {
+                "Name" : "No Camera Tilt",
+                "Description" : "Removes the camera tilt that can cause motion sickness for some players",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/NoCameraTilt.zip",
+                "Dependencies" : ["BepInEx", "K8Lib"],
+                "Files" : ["BepInEx\\plugins\\NoCameraTilt.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\NoCameraTilt.dll",
+                "MoreInfoLink" : null,
+                "Deprecated" : false
+            },
+            {
                 "Name" : "Adaptive Intractable Glow",
                 "Description" : "Allows for intractable objects dim or stop glowing when looted",
                 "Version" : "1.0.0.0",

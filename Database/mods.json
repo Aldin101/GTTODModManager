@@ -50,6 +50,31 @@
                 "VersionInfoFile" : "BepInEx\\plugins\\SaveCorruptionFix.dll",
                 "MoreInfoLink" : null,
                 "Deprecated" : false
+            },
+            {
+                "Name" : "Fix Plugin Types Serialization",
+                "Description" : "Allows for plugins to use custom serialized types, does nothing on it's own.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/FixPluginTypesSerialization.zip",
+                "Dependencies" : ["BepInEx"],
+                "Files" : ["BepInEx\\patchers\\FixPluginTypesSerialization.dll"],
+                "VersionInfoFile" : "BepInEx\\patchers\\FixPluginTypesSerialization.dll",
+                "MoreInfoLink" : "https://github.com/xiaoxiao921/FixPluginTypesSerialization",
+                "Deprecated" : false
+            }
+        ],
+        [
+            "Campaign",
+            {
+                "Name" : "Escape the Shatter",
+                "Description" : "The World Sentinel is dead, The Shatter is unstable, your mission: escape.",
+                "Version" : "1.0.0.0",
+                "Download" : "https://gttodmods.vegapatch.net/EscapeTheShatter.zip",
+                "Dependencies" : ["BepInEx", "Update Notifications", "Fix Plugin Types Serialization"],
+                "Files" : ["BepInEx\\plugins\\EscapeTheShatter.dll"],
+                "VersionInfoFile" : "BepInEx\\plugins\\EscapeTheShatter.dll",
+                "MoreInfoLink" : "https://aldin101.dev/escapetheshatter/",
+                "Deprecated" : false
             }
         ],
         [

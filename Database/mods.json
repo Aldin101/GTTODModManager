@@ -68,7 +68,7 @@
             {
                 "Name" : "Escape the Shatter",
                 "Description" : "The World Sentinel is dead, The Shatter is unstable, your mission: escape.",
-                "Version" : "1.0.0.2",
+                "Version" : "1.0.0.3",
                 "Download" : "https://gttodmods.vegapatch.net/EscapeTheShatter.zip",
                 "Dependencies" : ["BepInEx", "Update Notifications", "Fix Plugin Types Serialization"],
                 "Files" : ["BepInEx\\plugins\\EscapeTheShatter.dll"],

@@ -233,7 +233,7 @@
                 "Description" : "Making the loading screen after selecting a save a lot faster.",
                 "Version" : "1.0.1.0",
                 "Download" : "https://gttodmods.vegapatch.net/QuickLoad.zip",
-                "Dependencies" : ["BepInEx", "No Ludeo"],
+                "Dependencies" : ["BepInEx"],
                 "Files" : ["BepInEx\\plugins\\QuickLoad.dll"],
                 "VersionInfoFile" : "BepInEx\\plugins\\QuickLoad.dll",
                 "MoreInfoLink" : null,
